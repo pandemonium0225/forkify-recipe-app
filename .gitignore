@@ -1,0 +1,39 @@
+# 依賴檔案
+node_modules/
+npm-debug.log*
+
+# 建置檔案
+dist/
+build/
+
+# 暫存檔案
+*.tmp
+*.temp
+.cache/
+
+# 作業系統檔案
+.DS_Store
+Thumbs.db
+
+# IDE 檔案
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 環境變數檔案
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# 建置和暫存檔案
+.parcel-cache/
+dist/
+node_modules/
+.cache/
+
+# 其他不需要的檔案
+.DS_Store
+.env
