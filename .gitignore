@@ -1,6 +1,7 @@
 # 依賴檔案
 node_modules/
 npm-debug.log*
+.parcel-cache
 
 # 建置檔案
 dist/
@@ -27,13 +28,3 @@ Thumbs.db
 .env.development.local
 .env.test.local
 .env.production.local
-
-# 建置和暫存檔案
-.parcel-cache/
-dist/
-node_modules/
-.cache/
-
-# 其他不需要的檔案
-.DS_Store
-.env
