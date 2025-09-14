@@ -16,12 +16,23 @@ export const state = {
 
 const createRecipeObject = function (data) {
   const { recipe } = data.data;
+
+  // Validate image URL
+  const isValidImageUrl = url => {
+    try {
+      new URL(url);
+      return url.startsWith('http://') || url.startsWith('https://');
+    } catch {
+      return false;
+    }
+  };
+
   return {
     id: recipe.id,
     title: recipe.title,
     publisher: recipe.publisher,
     sourceUrl: recipe.source_url,
-    image: recipe.image_url,
+    image: isValidImageUrl(recipe.image_url) ? recipe.image_url : 'https://via.placeholder.com/300x200?text=No+Image',
     servings: recipe.servings,
     cookingTime: recipe.cooking_time,
     ingredients: recipe.ingredients,
